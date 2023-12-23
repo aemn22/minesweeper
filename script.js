@@ -15,7 +15,7 @@ if (localStorage.lose) {
 
 let allSpans = []
 let mines
-let minesCount = 15
+let minesCount = 10
 
 
 window.onload = startGame();
