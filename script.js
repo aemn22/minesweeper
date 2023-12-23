@@ -48,11 +48,14 @@ function createRandomsMines(n) {
         let randomNum = Math.round(Math.random() * 99)
         allSpans[randomNum].setAttribute("class", "mine")
         allSpans[randomNum].innerHTML = ''
-        // count the mines on the area
-        mineCounter(+allSpans[randomNum].getAttribute("data"))
+        
     }
     // get all mine
     mines = document.querySelectorAll(`.mine`)
+}
+for(let i =0;i<mines.lenght;i++){
+    // count the mines on the area
+        mineCounter(+mines[i].getAttribute("data"))
 }
  // function for count the mine around of the span
  function mineCounter(index) {
