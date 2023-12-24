@@ -53,10 +53,10 @@ function createRandomsMines(n) {
     // get all mine
     mines = document.querySelectorAll(`.mine`)
 }
-for(let i =0;i<mines.lenght;i++){
+mines.forEach(mine=>{
     // count the mines on the area
-        mineCounter(+mines[i].getAttribute("data"))
-}
+        mineCounter(+mine.getAttribute("data"))
+})
  // function for count the mine around of the span
  function mineCounter(index) {
     let left = allSpans[index - 1]
